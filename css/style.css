@@ -1,3 +1,103 @@
 .hidden {
   display: none;
 }
+
+body {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+container {
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bgImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 70%;
+  background-size: cover;
+  /* background-position: 50% 50%; */
+}
+
+#clock {
+  margin-top: 8vw;
+  margin-bottom: 0;
+  font-size: 8vw;
+  z-index: 1;
+}
+
+input {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-top: 2vw;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 70%;
+}
+
+#greeting {
+  font-size: 3rem;
+  margin-top: 0;
+  z-index: 1;
+}
+
+#todo-form {
+  z-index: 1;
+}
+
+#todo-list {
+  z-index: 1;
+}
+
+#quotes:first-child {
+  margin-bottom: 10vw;
+}
+
+#quotes {
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+#quotes > span:first-child {
+  font-size: 1.2rem;
+}
+
+#start-the-day {
+  font-size: 1.5rem;
+}
+
+#weather {
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
