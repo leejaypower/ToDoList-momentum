@@ -13,6 +13,8 @@
       <span></span>
     </div>
     <container>
+      <h2 id="clock">00:00</h2>
+
       <form id="login-form" class="hidden">
         <input
           required
@@ -24,11 +26,10 @@
         <button>Log IN</button>
       </form>
 
-      <h2 id="clock">00:00</h2>
-
       <h1 id="greeting" class="hidden"></h1>
 
       <div id="start-the-day">What is your main focus for today?</div>
+
       <form id="todo-form">
         <input
           type="text"
@@ -38,7 +39,10 @@
           autocomplete="off"
         />
       </form>
-      <ul id="todo-list"></ul>
+
+      <div id="list">
+        <ul id="todo-list"></ul>
+      </div>
       <div id="quotes">
         <span></span>
         <span></span>
