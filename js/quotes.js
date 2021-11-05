@@ -90,5 +90,5 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 // Math.random === 0과 1사이의 랜덤한 숫자
 // index는 0부터 시작하므로 Math.floor을 해도 모든 경우를 포함한 결과가 나온다.
 
-quote.innerText = todaysQuote.quote;
+quote.innerText = `"${todaysQuote.quote}"`;
 author.innerText = todaysQuote.author;

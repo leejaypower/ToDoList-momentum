@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 // const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const startTheDay = document.getElementById("start-the-day");
 
 const TODOS_KEY = "todos";
 
@@ -37,13 +38,15 @@ function paintToDo(newTodo) {
   span.innerText = newTodo.text;
 
   const button = document.createElement("button");
-  button.innerText = "🗑";
+  button.innerText = "✔";
 
   li.appendChild(span);
-  li.appendChild(button);
+  li.insertBefore(button, span);
   button.addEventListener("click", deleteTodo);
+  button.id = "done";
 
   toDoList.appendChild(li);
+
   // document에 있는 toDoList에 li(span, button포함)을 추가해준다. 입력받을 때 마다 뒤에 추가된다(append) <-> prepend
 }
 
@@ -80,6 +83,9 @@ if (savedToDos !== null) {
 
   // parsedTODos.forEach(sayHello())
   parsedToDos.forEach(paintToDo);
+
+  startTheDay.classList.add(HIDDEN_CLASS);
+  // 하나의 html파일에 여러 js파일이 import되어 있는 경우, 전역변수는 공유가 가능하다.
 }
 
 /*
@@ -94,3 +100,7 @@ function sexyFilter(item) {
 [1, 2, 3, 4].filter((item) => item !== 3);
 
  */
+
+if (toDos.length === 0) {
+  startTheDay.classList.remove(HIDDEN_CLASS);
+}

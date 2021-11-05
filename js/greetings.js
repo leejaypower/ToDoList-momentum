@@ -18,7 +18,7 @@ function loginSubmit(event) {
 function showGreetings(username) {
   // 여기서 username은 그저 인자에 username이라고 이름 붙인 것일뿐, 어떠한 변수를 말하는 것이 아니다.
   // 함수를 호출할 때 인자로 필요한 정보를 받아서 주면 그 정보를 받아오는 공간일 뿐이다.
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}.`;
   // 변수를 String 안에서 사용할 수 있는 방법
   greeting.classList.remove(HIDDEN_CLASS);
 }
